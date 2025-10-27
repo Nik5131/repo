@@ -1,0 +1,62 @@
+@keyframes logo-rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}.logo {
+  
+    animation: logo-rotation 3s linear infinite;
+}
+
+.gebrinlog {
+    font-size: 14px;
+    color: #777;
+    font-weight: 300;
+    margin-left: 500px;
+}
+.uitlogen {
+    color: #777;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 300;
+    transition: color 0.3s;
+}
+
+
+
+.aa {
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 0.75rem rgba(0,0,0,0.1);
+    margin-left: 100px;
+}
+.a2{
+    margin-left: 100px;
+    padding-top: 30px;
+}
+.title{
+padding: 2rem;
+margin-left: 100px;
+}
+.filmlijst {
+    display: flex;           
+    flex-wrap: wrap;         
+    gap: 1rem;               
+    justify-content: flex-start; 
+    padding: 1rem;
+}
+
+.filmlijst .card {
+    width: 18rem;            
+    flex: 0 0 auto;          
+}
+.title2{
+text-align: center;
+padding: 2rem;
+}
+
