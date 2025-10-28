@@ -96,17 +96,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
 
-      <!-- <form action="inloggen.php" method="POST">
-      Naam: <br><input type="text" name="naam"required><br>
-      E-mail: <br><input type="text" name="email"required><br>
-      Password: <br><input type="password" name="wachtwoord"required><br>
-       
-     Herhaal Wachtwoord:<br><input type="password" name="wachtwoordherhaal" required><br><br>
-
-     <input type="submit" value="submit">
-    </form> -->
-    <!-- <a class=inschrijven href="inschrijven.php">Inschrijven </a></p> -->
-    
+      
     
 </body>
 </html>
