@@ -112,7 +112,7 @@ function haalgebruiker(){
         echo "<td>".htmlspecialchars($email)."</td>";
         echo "<td> <a href='update.php?id=" . htmlspecialchars($id) . "'>update</a></td>";
           echo "<td> <a href='delete.php?id=" . htmlspecialchars($id) . "'>delete</a></td>";
-        // echo "<td>".htmlspecialchars($wachtwoord)."</td>";
+       
         echo "</tr>";
     }
     echo "</table>";
