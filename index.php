@@ -1,15 +1,16 @@
 <?php
-
+//sessie starten
 session_start();
 require_once 'config.php';
 
-
+ //als niet terug gaan naar inloggen
 if (!isset($_SESSION['userId'])) {
     header("Location: inloggen.php");
     exit;
 }
+//user id halen 
 $userId = $_SESSION['userId'];
-
+//prepare statment om de naam te hallen
 $stmt = $conn->prepare("SELECT naam FROM gebruikers WHERE id = ?");
 
 $stmt->bind_param("i", $userId);
@@ -24,14 +25,14 @@ $stmt->close();
 
 
 
-
+//prepare statment voor film
 $stmt = $conn->prepare("SELECT * FROM film");
 if ($stmt->execute()===false){
     throw new Exception($stmt->error);
  }
 
 $stmt->execute();
-
+///result halen door stmt
 $result = $stmt->get_result();
 
 
@@ -85,7 +86,7 @@ $films=$result->fetch_all(MYSQLI_ASSOC);
         <h1 class="title2">Films</h1>
 
         <div class="filmlijst">
-  
+  <!-- for each om alle films te zien op de homepagina -->
         <?php foreach ($films as $film): ?>
        <div class="card" style="width: 18rem;">
         <img src="img/<?php echo htmlspecialchars($film['bestand']); ?>" class="card-img-top" alt="img">
@@ -97,6 +98,8 @@ $films=$result->fetch_all(MYSQLI_ASSOC);
   </div>
     
       <?php endforeach; ?>
+
+      <a href="pdf.php" class="btn btn-primary">Overzicht downloaden</a>
    
     
 </body>
