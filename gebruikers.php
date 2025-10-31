@@ -4,7 +4,7 @@
 session_start();
 require_once 'config.php';
 
-
+//user naam op the recht kant zien
 if (!isset($_SESSION['userId'])) {
     header("Location: inloggen.php");
     exit;
@@ -82,6 +82,7 @@ $gebruikers=$result->fetch_all(MYSQLI_ASSOC);
 </body>
 </html>
 <?php
+//functie om the gebruiker gegevens te halen
 function haalgebruiker(){
     $servername = "localhost";
     $username = "root";
