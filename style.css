@@ -53,10 +53,17 @@ margin-left: 100px;
 
 .filmlijst .card {
     width: 18rem;            
-    flex: 0 0 auto;          
+    flex: 0 0 auto; 
+     animation: dropIn 1s ease-out 0.6s forwards;      
+}
+@keyframes dropIn {
+  0% { opacity: 0; transform: translateY(-150px) scale(0.8); }
+  80% { opacity: 1; transform: translateY(10px) scale(1.1); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
 }
 .title2{
 text-align: center;
 padding: 2rem;
 }
+
 
